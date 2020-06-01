@@ -2,7 +2,8 @@ import React from 'react';
 
 function MainImage(props){
 
-    // console.log(`props ${props.image}`)
+    // console.log(`props ${props}`)
+    // console.log(props)
 
     return(
     <div style={{background: `linear-gradient(to bottom, rgba(0,0,0,0)

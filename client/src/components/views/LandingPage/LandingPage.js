@@ -14,7 +14,7 @@ function LandingPage() {
         // setMovies([hookMoviesResults])
         setMainMovieImage(hookMainMovieImage)
         // setMainMovieImage(response.results[0])
-        console.log(`Movies->   ${hookMoviesResults}`, `MainMovieImage->  ${hookMainMovieImage}`);
+        // console.log(`Movies->   ${hookMoviesResults}`, `MainMovieImage->  ${hookMainMovieImage}`);
     }
 
 
@@ -49,7 +49,8 @@ function LandingPage() {
          {/* path오류는 값을 가져오기전 랜더링해버려서 그럼 */}
          {/* MainImage */}
         {MainMovieImage &&
-        <MainImage image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
+        <MainImage  LandingPage
+                    image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
                     title ={MainMovieImage.original_title}
                     text = {MainMovieImage.overview}
                     />
@@ -64,7 +65,8 @@ function LandingPage() {
                     <React.Fragment key={index}>
                         <GridCards image={movie.poster_path ? `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
                         movieId={movie.id}
-                        movieName={movie.original_title}/>
+                        movieName={movie.original_title}
+                        landingPage/>
                     </React.Fragment>
                 ))}
 
